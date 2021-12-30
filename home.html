@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+       
+        
+    </head>
+<body>
+    
+
+   <!--coppy-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  
+                </li>
+               
+              </ul>
+                    
+                   
+            <div id="account-info"> </div> 
+        </div>
+    </div>
+   
+</nav>
+
+  <!-- Modal-->
+  <form id="formlogin" class="modal fade"  tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control " id="username" placeholder="Username">
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="submit" class="btn btn-info">Login</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    No account? Register here!<p ><a href="register.html" class="text-danger">here</a></p>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+   
+</form>
+
+<div class="container mt-3">
+    <div class="row product-list" id="product-list"></div>
+</div>
+
+
+
+<!--body-->
+
+ <!-- other-->
+ 
+
+  <!-- SCRIPT-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+  crossorigin="anonymous"></script>
+  <script src="database.js"></script>
+   <script>
+       window.onload= function(){
+        initialize_database();
+    fetch_database();
+    get_product();
+    on_load();
+       }
+   </script>
+</body>
+
+  </html>
+
